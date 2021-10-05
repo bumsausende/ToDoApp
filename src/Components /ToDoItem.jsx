@@ -1,5 +1,5 @@
 export const ToDoItem = (props) => {
-    return {
+    return (
 <li>{props.name}</li>
-    };
+    );
 };

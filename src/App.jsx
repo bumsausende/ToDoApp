@@ -1,5 +1,5 @@
 import { ToDoList } from './ToDoList'
-import './App.css'
+/*import {App} from './App.css'*/
 
 export const App = () => {
   
@@ -8,9 +8,7 @@ return (
       <h1> ToDOOO</h1>
       <h2> something has to happen for some commit</h2>
     <ul>
-      <li> klarkommen </li>
-      <li> abwaschen </li>
-      <li> Geld eintreiben</li>
+       {ToDoList}  
     </ul>
     </div>
   );
