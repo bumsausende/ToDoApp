@@ -1,7 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Reenie+Beanie&display=swap");
+
+body {
+  margin: 60px auto;
+  background: #666;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 8px;
+}
+ul,
+li {
+  list-style: none;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li {
+  margin: 1em;
+  transform: rotate(13deg);
+}
+/*ul li:hover {
+  margin: 1em;
+  transform: rotate(13deg);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  position: relative;
+  z-index: 5;
+}*/
+
 li {
   cursor: pointer;
 }
 
 .ToDoItem--isDone {
   text-decoration: line-through;
+}
+.App {
+  font-family: "Reenie Beanie";
+  font-size: 16pt;
+  background-color: khaki;
+  color: rgb(255, 0, 0);
+  box-shadow: 8px 8px 8px rgba(33, 33, 33, 0.7);
+  transition: transform 0.15s linear;
+  transform: rotate(-6deg);
+}
+/*.App :hover {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  position: relative;
+  z-index: 5;
+}*/
+
+.listOfToDos {
+  color: black;
+}
+
+.titleToDo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24pt;
+}
+.secondTitleToDo {
+  display: flex;
+  justify-content: center;
+}
+
+.createToDo {
+  flex-direction: row;
+}
+
+form {
 }

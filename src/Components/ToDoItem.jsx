@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { useLocalStorageState } from "../utils/localStorage";
 
-export const ToDoItem = ({ name }) => {
-  const [isDone, setIsDone] = useState(false);
+//umbenennen des Hooks und Key vergeben!
+export const ToDoItem = ({ name, id }) => {
+  const [isDone, setIsDone] = useLocalStorageState(`isDoneState ${id}`, false);
 
   return (
     <li
