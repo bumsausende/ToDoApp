@@ -6,7 +6,7 @@ export const App = () => {
 return (
     <div className="App">
       <h1> ToDOOOlist</h1>
-      <h2> something has to happen for some commit</h2>
+      <h2> want some less?</h2>
     <ul> 
        <ToDoList />
     </ul>

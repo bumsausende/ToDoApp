@@ -1,31 +1,29 @@
 import { useState } from "react";
-import { ToDoItem } from "./ToDoItem"
+import { ToDoItem } from "./ToDoItem";
+import { CreateToDo } from "./CreateToDo";
 
-export const ToDoList =() =>{
-  
+export const ToDoList = () => {
   const [ToDos, setToDos] = useState([
-    {id:0, name:"klarkommen"},
-    {id:1, name:"machen"},
-    {id:2, name:"Abwasch stehen lassen"}
+    { id: 0, name: "klarkommen" },
+    { id: 1, name: "machen" },
+    { id: 2, name: "Abwasch stehen lassen" },
   ]);
-  return (
-  <>
-  <ul>
- {ToDos.map(({id, name }) => (
-   return <ToDoItem key={id} name={name}/>))};
-</ul>
-<CreateToDo
-onCreate = {(newToDo)=>{
-  const = id = ToDos.length;
-const newToDoObjects ={
-  id,
-  name: newToDo,
-};
-setToDos([...ToDos, newToDoObjects]);
+  console.log(ToDos);
 
-}}/>
-</>
+  return (
+    <>
+      <ul>
+        {ToDos.map(({ id, name }) => (
+          <ToDoItem key={id} name={name} />
+        ))}
+      </ul>
+      <CreateToDo
+        onCreate={(name) => {
+          setToDos([...ToDos, { id: ToDos.length, name }]);
+        }}
+      />
+    </>
   );
 };
-
-  // ToDos = todos
+// generierte ID fehlt
+// ToDos = todos
