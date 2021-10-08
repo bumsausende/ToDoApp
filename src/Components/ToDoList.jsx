@@ -15,12 +15,21 @@ export const ToDoList = () => {
     { id: 1, name: "machen" },
     { id: 2, name: "Abwasch stehen lassen" },
   ]);
+  //remove items
+  const removeToDo = (id) => {
+    setTodos(ToDos.filter((ToDo) => todo.id !== id));
+  };
   /*now the rendering happens- at <CreateToDo*/
   return (
     <>
       <ul>
         {ToDos.map(({ id, name }) => (
-          <ToDoItem key={id} id={id} name={name} />
+          <ToDoItem
+            key={id}
+            id={id}
+            name={name}
+            onRemove={() => removeToDo(id)}
+          />
         ))}
       </ul>
       <CreateToDo

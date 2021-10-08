@@ -13,6 +13,18 @@ export const ToDoItem = ({ name, id }) => {
       className={isDone ? "ToDoItem ToDoItem--isDone" : "ToDoItem"}
     >
       {name}
+
+      <button
+        type="button"
+        className="TodoItem__remove"
+        title={`Remove "${name}"`}
+        onClick={() => {
+          onRemove?.();
+          removeIsDone();
+        }}
+      >
+        ❌
+      </button>
     </li>
   );
 };
